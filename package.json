@@ -1,0 +1,17 @@
+{
+  "name": "truffletest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "solidity-coverage": "^0.5.11"
+  }
+}
