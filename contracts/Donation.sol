@@ -19,7 +19,7 @@ contract Donation{
     payable
     returns(bool) {
         require(msg.value >= 1 ether && msg.value <= 10 ether,"enter valid value");
-        if(_referral == 0x0000000000000000000000000000000000000000){
+        if(_referral == 0x00){
             require(zero == false,"0x00 address is not allowed");
             participants.push(msg.sender);
             zero = true;
@@ -50,11 +50,11 @@ contract Donation{
                 address add2 = find(add1);
                 _referral.transfer(val);
                 total += msg.value -val;
-                if(add1 != 0x0000000000000000000000000000000000000000){
+                if(add1 != 0x00){
                     add1.transfer(val);
                     total -= val;
                 }
-                if(add2 != 0x0000000000000000000000000000000000000000){
+                if(add2 != 0x00){
                     add2.transfer(val);
                     total -= val;
                 }
